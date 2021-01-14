@@ -1,30 +1,24 @@
 <script>
 	import Navbar from './components/Navbar.svelte'
-	import Hero from './components/Hero.svelte'
-	import { dictionary, locale } from 'svelte-i18n';
-
-	dictionary.set({
-        en: {
-            app: {
-                title: 'Filmic',
-                subtitle: 'A curated collection of eighties movies',
-            },
-        },
-        ar: {
-            app: {
-                title: 'فيلميك',
-                subtitle: 'مجموعة أفلام مختارة من الثمنينات',
-            },
-        },
-    });
-    locale.set('en');
+	import Footer from './components/Footer.svelte'
+    import {Router,Route} from 'svelte-routing'
+    import Home from './pages/Home.svelte'
+    import About from './pages/About.svelte'
+    import Projects from './pages/Projects.svelte'
+    import Media from './pages/Media.svelte'
+    import Teacher from './pages/Teacher.svelte'
+    import Contact from './pages/Contact.svelte'
 </script>
 
 <main>
-	<Navbar />
-	<Hero />
+	<Router>
+        <Navbar />
+        <Route path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/projects" component={Projects}/>
+        <Route path="/media" component={Media}/>
+        <Route path="/teacher" component={Teacher}/>
+        <Route path="/contact" component={Contact}/>
+        <Footer />
+    </Router>
 </main>
-
-<style>
-	
-</style>
