@@ -6,7 +6,7 @@
   class="navbar navbar-expand-lg navbar-light fixed-top justify-content-between"
   id="mainNavbar"
 >
-  <a class="navbar-brand" href="/">Roman Yearian</a>
+  <a class="navbar-brand" href="/">Roman Yearian, violin</a>
   <button
     class="navbar-toggler"
     type="button"

@@ -24,7 +24,7 @@
             <textarea class="form-control" name="message" />
           </label>
         </div>
-        <input type="submit" class="btn btn-outline-dark" value="Submit" />
+        <input type="submit" class="btn btn-info" value="Submit" />
       </form>
     </div>
   </div>
