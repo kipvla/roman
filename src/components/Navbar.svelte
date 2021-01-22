@@ -1,5 +1,17 @@
 <script>
   import { link } from "svelte-routing";
+  import {onMount} from 'svelte';
+
+  onMount(()=>{
+        function classToggle() {
+          console.log("toggled")
+            const navs = document.querySelectorAll('.navbar-items');
+            console.log(navs)
+            navs.forEach(nav => nav.classList.toggle('show'));
+        }
+        document.querySelectorAll('.nav-item').forEach(item => item.addEventListener('click', classToggle));
+        // document.querySelector('.navbar-items').addEventListener('click', classToggle);
+    });
 </script>
 
 <nav
@@ -18,7 +30,7 @@
     <span class="navbar-toggler-icon" />
   </button>
 
-  <div class="collapse navbar-collapse navbar-items-right" id="navbarSupportedContent">
+  <nav class="collapse navbar-collapse navbar-items" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="/about" use:link>about</a>
@@ -54,7 +66,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
-  </div>
+  </nav>
 </nav>
 
 <style>
