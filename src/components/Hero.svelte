@@ -14,6 +14,7 @@
     img {
         order: -1;
         width: 80vw;
+        object-fit: cover;
     }
   }
 </style>
