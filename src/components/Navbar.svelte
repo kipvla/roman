@@ -1,17 +1,26 @@
 <script>
   import { link } from "svelte-routing";
-  import {onMount} from 'svelte';
+  import { onMount } from "svelte";
 
-  onMount(()=>{
-        function classToggle() {
-          console.log("toggled")
-            const navs = document.querySelectorAll('.navbar-items');
-            console.log(navs)
-            navs.forEach(nav => nav.classList.toggle('show'));
-        }
-        document.querySelectorAll('.nav-item').forEach(item => item.addEventListener('click', classToggle));
-        // document.querySelector('.navbar-items').addEventListener('click', classToggle);
-    });
+  onMount(() => {
+    function classToggle() {
+      console.log("toggled");
+      const navs = document.querySelectorAll(".navbar-items");
+      navs.forEach((nav) => nav.classList.toggle("show"));
+    }
+    document
+      .querySelectorAll(".nav-item")
+      .forEach((item) => item.addEventListener("click", classToggle));
+    // document.querySelector('.navbar-items').addEventListener('click', classToggle);
+  });
+
+  // translate
+  import translations from "../translations";
+  import { dict, locale, t } from "../i18n";
+
+  $: languages = Object.keys(translations);
+
+  $: dict.set(translations);
 </script>
 
 <nav
@@ -19,6 +28,7 @@
   id="mainNavbar"
 >
   <a class="navbar-brand" href="/">Roman Yearian, violin</a>
+  <!-- {info.navbar[0]} -->
   <button
     class="navbar-toggler"
     type="button"
@@ -30,22 +40,30 @@
     <span class="navbar-toggler-icon" />
   </button>
 
-  <nav class="collapse navbar-collapse navbar-items" id="navbarSupportedContent">
+  <nav
+    class="collapse navbar-collapse navbar-items"
+    id="navbarSupportedContent"
+  >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/about" use:link>about</a>
+        <a class="nav-link" href="/about" use:link>{$t('navbar')[0]}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/projects" use:link>projects</a>
+        <a class="nav-link" href="/projects" use:link>{$t('navbar')[1]}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/media" use:link>media</a>
+        <a class="nav-link" href="/media" use:link>{$t('navbar')[2]}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/teacher" use:link>teacher</a>
+        <a class="nav-link" href="/teacher" use:link>{$t('navbar')[3]}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contact" use:link>contact</a>
+        <a class="nav-link" href="/contact" use:link>{$t('navbar')[4]}
+        </a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,6 +85,11 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </nav>
+  <select bind:value={$locale}>
+    {#each languages as lang}
+      <option value={lang}>{lang}</option>
+    {/each}
+  </select>
 </nav>
 
 <style>
@@ -75,5 +98,9 @@
   }
   #navbarSupportedContent {
     float: right;
+  }
+  select {
+    background: transparent;
+    border: none;
   }
 </style>
