@@ -14,6 +14,11 @@
     // document.querySelector('.navbar-items').addEventListener('click', classToggle);
   });
 
+  let large = true;
+  if (window.innerWidth < 769){
+    large = false;
+  }
+
   // translate
   import translations from "../translations";
   import { dict, locale, t } from "../i18n";
@@ -27,7 +32,7 @@
   class="navbar navbar-expand-lg navbar-light fixed-top justify-content-between"
   id="mainNavbar"
 >
-  <a class="navbar-brand" href="/">Roman Yearian, violin</a>
+  <a class="navbar-brand" href="/">Roman {#if large} Yearian, violin {/if}</a>
   <!-- {info.navbar[0]} -->
   <button
     class="navbar-toggler"

@@ -6,4 +6,7 @@
   div {
     text-align: center;
   }
+  footer {
+    background-color: rgba(90, 158, 171, 0.6);
+  }
 </style>

@@ -44,8 +44,8 @@
     /* background-position: 48% center; */
     height: 800px;
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    color: black;
+    text-shadow: 1px 1px 1px white;
     font-weight: 500;
   }
 </style>
