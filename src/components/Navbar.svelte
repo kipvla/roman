@@ -108,4 +108,9 @@
     background: transparent;
     border: none;
   }
+  @media only screen and (max-width: 768px) {
+    .nav-link {
+      color: black!important;
+    }
+  }
 </style>
