@@ -6,7 +6,7 @@
 </script>
 
 <div class="container d-flex mt-5 pt-5 justify-content-center">
-  <div class="d-flex flex-column justify-content-center text-justify">
+  <div class="d-flex flex-column justify-content-center text-justify p-5">
     <p>
         {$t('about')[0]}
     </p>
@@ -16,7 +16,7 @@
     </p>
     {/if}
   </div>
-  <img src="images/roman.jpg" alt="" in:fade={{duration: 1000}}/>
+  <img src="images/roman.jpg" alt="Roman outside" class="shadow mb-5" in:fade={{duration: 1000}}/>
 </div>
 
 <style>
