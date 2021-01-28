@@ -21,7 +21,7 @@
     </div>
   </div>
   <img
-    class="shadow"
+    class="shadow my-1"
     src="images/roman.jpg"
     alt=""
     in:fade={{ duration: 1000 }}
