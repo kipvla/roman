@@ -48,11 +48,10 @@
     /* background-position: 48% center; */
     height: 800px;
     text-align: center;
-    font-weight: 500;
     color: white;
   }
   #form {
-    background-color: rgba(100,100,100, 0.8);
+    background-color: rgba(14, 6, 85, 0.8);
     max-width: fit-content;
     max-height: fit-content;
   }

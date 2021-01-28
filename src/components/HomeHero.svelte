@@ -1,4 +1,8 @@
-<div class="hero" />
+<script>
+  import {fade} from 'svelte/transition'
+</script>
+
+<div class="hero" in:fade={{duration:1000}}/>
 
 <style>
   .hero {
