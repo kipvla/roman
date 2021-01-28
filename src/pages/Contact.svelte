@@ -26,7 +26,7 @@
           <div class="form-group">
             <label>
               {$t('contact.form')[2]}:
-              <textarea class="form-control" name="message" />
+              <textarea class="form-control" name="message" rows="10" col="10"/>
             </label>
           </div>
           <input type="submit" class="btn btn-info" value={$t('contact.form')[3]} />
