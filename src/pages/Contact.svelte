@@ -10,7 +10,7 @@
     </div>
     <div class="content mt-5">
       <div class="container contact-form" style="text-align: center;">
-        <form action="https://formspree.io/f/xpzolpwz" method="POST">
+        <form action="https://formspree.io/f/xwkwyddo" method="POST">
           <div class="form-group">
             <label>
               {$t('contact.form')[0]}:
