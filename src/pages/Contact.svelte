@@ -1,41 +1,50 @@
 <script>
-  import {fly} from 'svelte/transition'
-  import {t} from '../i18n'
-  
+  import { fly } from "svelte/transition";
+  import { t } from "../i18n";
 </script>
 
-<div class="container-fluid d-flex justify-content-center align-items-start" id="contact">
-  <div in:fly={{duration: 2000, x: 200}} id="form" class="px-2 py-3 rounded">
+<div
+  class="container-fluid d-flex justify-content-center align-items-start"
+  id="contact"
+>
+  <div in:fly={{ duration: 2000, x: 200 }} id="form" class="px-2 py-3 rounded">
     <div class="m-auto mb-3" id="blurb">
-      {$t('contact.message')}
+      {$t("contact.message")}
     </div>
     <div class="content mt-5">
       <div class="container contact-form" style="text-align: center;">
         <form action="https://formspree.io/f/xwkwyddo" method="POST">
           <div class="form-group">
-            <label>
-              {$t('contact.form')[0]}:
-              <input class="form-control" type="text" name="name" />
+            <label for="name">
+              {$t("contact.form")[0]}:
             </label>
+            <input class="form-control" type="text" name="name" />
           </div>
           <div class="form-group">
-            <label>
-              {$t('contact.form')[1]}:
-              <input class="form-control" type="text" name="_replyto" />
-            </label>
+            <label for="_replyto"> {$t("contact.form")[1]}: </label>
+
+            <input class="form-control" type="text" name="_replyto" />
           </div>
           <div class="form-group">
-            <label>
-              {$t('contact.form')[2]}:
-              <textarea class="form-control" name="message" rows="10" col="10"/>
+            <label for="message">
+              {$t("contact.form")[2]}:
             </label>
+
+              <textarea
+                class="form-control"
+                name="message"
+                rows="10"
+              />
           </div>
-          <input type="submit" class="btn btn-info" value={$t('contact.form')[3]} />
+          <input
+            type="submit"
+            class="btn btn-info"
+            value={$t("contact.form")[3]}
+          />
         </form>
       </div>
     </div>
   </div>
-  
 </div>
 
 <style>
@@ -52,7 +61,7 @@
     color: white;
   }
   #form {
-    background-color: rgba(14, 6, 85, 0.8);
+    background-color: rgba(5, 127, 195, 0.8);
     max-width: fit-content;
     max-height: fit-content;
   }
