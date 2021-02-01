@@ -1,6 +1,7 @@
 <script>
   import {fly} from 'svelte/transition'
   import {t} from '../i18n'
+  
 </script>
 
 <div class="container-fluid d-flex justify-content-center align-items-start" id="contact">
