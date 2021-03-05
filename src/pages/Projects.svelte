@@ -7,7 +7,7 @@
     <div class="pb-4 text-center">
         {$t('projects')}
     </div>
-    <img src="images/violin.jpeg" alt="violin" in:fade={{duration:1500}}>
+    <img src="images/violin.jpeg" alt="violin" class="shadow-lg rounded" in:fade={{duration:1500}}>
 </div>
 
 <style>

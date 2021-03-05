@@ -6,7 +6,7 @@
 </script>
 
 <div class="container d-flex mt-5 pt-5 justify-content-center">
-  <div class="d-flex flex-column justify-content-center text-justify p-5">
+  <div class="d-flex flex-column justify-content-center py-3 py-md-0">
     <p>
         {$t('teaching')[0]}
     </p>

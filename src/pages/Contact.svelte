@@ -1,5 +1,5 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import { t } from "../i18n";
 </script>
 
@@ -7,7 +7,7 @@
   class="container-fluid d-flex justify-content-center align-items-start"
   id="contact"
 >
-  <div in:fly={{ duration: 2000, x: 200 }} id="form" class="px-2 py-3 rounded">
+  <div in:fade={{ duration: 1500}} id="form" class="px-2 py-3 rounded">
     <div class="m-auto mb-3" id="blurb">
       {$t("contact.message")}
     </div>
@@ -61,7 +61,7 @@
     color: white;
   }
   #form {
-    background-color: rgba(5, 127, 195, 0.8);
+    background-color: rgba(5, 127, 195, 0.5);
     max-width: fit-content;
     max-height: fit-content;
   }
