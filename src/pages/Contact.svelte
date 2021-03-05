@@ -7,7 +7,7 @@
   class="container-fluid d-flex justify-content-center align-items-start"
   id="contact"
 >
-  <div in:fade={{ duration: 1500}} id="form" class="px-2 py-3 rounded">
+  <div in:fade={{ duration: 1500 }} id="form" class="px-2 py-3 rounded">
     <div class="m-auto mb-3" id="blurb">
       {$t("contact.message")}
     </div>
@@ -30,11 +30,7 @@
               {$t("contact.form")[2]}:
             </label>
 
-              <textarea
-                class="form-control"
-                name="message"
-                rows="10"
-              />
+            <textarea class="form-control" name="message" rows="10" />
           </div>
           <input
             type="submit"
@@ -48,14 +44,10 @@
 </div>
 
 <style>
-  /* #blurb {
-
-  } */
   #contact {
     padding-top: 5rem;
     background-image: url("/images/bigbend2.jpeg");
     background-size: cover;
-    /* background-position: 48% center; */
     height: 800px;
     text-align: center;
     color: white;
